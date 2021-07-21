@@ -20,7 +20,7 @@ class _RouteDriveScreenState extends State<RouteDriveScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomPadding: false,
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(title: Text('驾车路线规划')),
       body: DecoratedColumn(
         padding: EdgeInsets.all(kSpaceBig),

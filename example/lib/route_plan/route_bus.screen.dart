@@ -20,7 +20,7 @@ class _RouteBusScreenState extends State<RouteBusScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomPadding: false,
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(title: Text('公交路线规划')),
       body: DecoratedColumn(
         padding: EdgeInsets.all(kSpaceBig),

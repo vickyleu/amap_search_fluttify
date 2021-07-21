@@ -20,7 +20,7 @@ class _RouteWalkScreenState extends State<RouteWalkScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomPadding: false,
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(title: Text('步行路线规划')),
       body: DecoratedColumn(
         padding: EdgeInsets.all(kSpaceBig),

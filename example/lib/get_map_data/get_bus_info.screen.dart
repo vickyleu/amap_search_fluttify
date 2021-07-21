@@ -18,7 +18,7 @@ class _GetBusInfoScreenState extends State<GetBusInfoScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomPadding: false,
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(title: Text('获取公交数据')),
       body: DecoratedColumn(
         padding: EdgeInsets.all(kSpaceBig),

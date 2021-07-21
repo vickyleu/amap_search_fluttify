@@ -8,7 +8,7 @@ class GetPoiScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomPadding: false,
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(title: Text('获取POI数据')),
       body: ListView(
         children: <Widget>[
@@ -49,7 +49,7 @@ class _KeywordPoiScreenState extends State<KeywordPoiScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomPadding: false,
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(title: Text('关键字检索POI')),
       body: DecoratedColumn(
         padding: EdgeInsets.all(kSpaceBig),
@@ -114,7 +114,7 @@ class _AroundPoiScreenState extends State<AroundPoiScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomPadding: false,
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(title: Text('周边检索POI')),
       body: DecoratedColumn(
         padding: EdgeInsets.all(kSpaceBig),
@@ -201,7 +201,7 @@ class _InputTipScreenState extends State<InputTipScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomPadding: false,
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(title: Text('输入内容自动提示')),
       body: DecoratedColumn(
         padding: EdgeInsets.all(kSpaceBig),
