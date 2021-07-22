@@ -1,7 +1,7 @@
 import 'package:amap_search_fluttify/amap_search_fluttify.dart';
 import 'package:decorated_flutter/decorated_flutter.dart';
 import 'package:flutter/material.dart';
-
+import 'package:amap_search_fluttify_example/widgets/dimens.dart';
 /// 获取天气数据
 class GetWeatherInfoScreen extends StatefulWidget {
   @override
@@ -9,7 +9,7 @@ class GetWeatherInfoScreen extends StatefulWidget {
 }
 
 class _GetWeatherInfoScreenState extends State<GetWeatherInfoScreen> {
-  final _keywordController = TextEditingController(text: '杭州');
+  final _keywordController = TextEditingController(text: '深圳');
 
   String _district = '';
 
@@ -19,7 +19,7 @@ class _GetWeatherInfoScreenState extends State<GetWeatherInfoScreen> {
       resizeToAvoidBottomInset: false,
       appBar: AppBar(title: Text('获取天气数据')),
       body: DecoratedColumn(
-        padding: EdgeInsets.all(kSpaceBig),
+        padding: EdgeInsets.all(kSpaceLarge),
         children: <Widget>[
           TextFormField(
             controller: _keywordController,

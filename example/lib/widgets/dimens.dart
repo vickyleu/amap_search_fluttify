@@ -6,7 +6,7 @@ const kSpaceTiny = 1.0;
 const kSpaceSmall = 4.0;
 const kSpaceNormal = 8.0;
 const kSpaceLittleBig = 12.0;
-const kSpaceBig = 16.0;
+// const kSpaceLarge = 16.0;
 const kSpaceLarge = 24.0;
 const kSpaceHuge = 32.0;
 const kSpaceGiant = 64.0;
@@ -33,9 +33,9 @@ const SPACE_LITTLE_BIG_HORIZONTAL =
 const SPACE_LITTLE_BIG_VERTICAL =
     SizedBox(width: kSpaceZero, height: kSpaceLittleBig);
 
-const SPACE_BIG = SizedBox(width: kSpaceBig, height: kSpaceBig);
-const SPACE_BIG_HORIZONTAL = SizedBox(width: kSpaceBig, height: kSpaceZero);
-const SPACE_BIG_VERTICAL = SizedBox(width: kSpaceZero, height: kSpaceBig);
+const SPACE_BIG = SizedBox(width: kSpaceLarge, height: kSpaceLarge);
+const SPACE_BIG_HORIZONTAL = SizedBox(width: kSpaceLarge, height: kSpaceZero);
+const SPACE_BIG_VERTICAL = SizedBox(width: kSpaceZero, height: kSpaceLarge);
 
 const SPACE_LARGE = SizedBox(width: kSpaceLarge, height: kSpaceLarge);
 const SPACE_LARGE_HORIZONTAL = SizedBox(width: kSpaceLarge, height: kSpaceZero);
@@ -53,7 +53,7 @@ const kDividerTiny = Divider(height: kSpaceTiny);
 const kDividerSmall = Divider(height: kSpaceSmall);
 const kDividerNormal = Divider();
 const kDividerLittleBig = Divider(height: kSpaceLittleBig);
-const kDividerBig = Divider(height: kSpaceBig);
+const kDividerBig = Divider(height: kSpaceLarge);
 const kDividerLarge = Divider(height: kSpaceLarge);
 const kDividerHuge = Divider(height: kSpaceHuge);
 const kDividerGiant = Divider(height: kSpaceGiant);

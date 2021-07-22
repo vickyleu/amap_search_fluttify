@@ -1,7 +1,7 @@
 import 'package:amap_search_fluttify/amap_search_fluttify.dart';
 import 'package:decorated_flutter/decorated_flutter.dart';
 import 'package:flutter/material.dart';
-
+import 'package:amap_search_fluttify_example/widgets/dimens.dart';
 /// 获取行政区划数据
 class GetDistrictInfoScreen extends StatefulWidget {
   @override
@@ -9,7 +9,7 @@ class GetDistrictInfoScreen extends StatefulWidget {
 }
 
 class _GetDistrictInfoScreenState extends State<GetDistrictInfoScreen> {
-  final _keywordController = TextEditingController(text: '西湖区');
+  final _keywordController = TextEditingController(text: '福田区');
 
   String _district = '';
 
@@ -19,7 +19,7 @@ class _GetDistrictInfoScreenState extends State<GetDistrictInfoScreen> {
       resizeToAvoidBottomInset: false,
       appBar: AppBar(title: Text('获取行政区划数据')),
       body: DecoratedColumn(
-        padding: EdgeInsets.all(kSpaceBig),
+        padding: EdgeInsets.all(kSpaceLarge),
         children: <Widget>[
           TextFormField(
             controller: _keywordController,

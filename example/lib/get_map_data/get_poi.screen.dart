@@ -1,9 +1,11 @@
+import 'dart:convert';
+
 import 'package:amap_search_fluttify/amap_search_fluttify.dart';
 import 'package:amap_search_fluttify_example/widgets/function_item.widget.dart';
 import 'package:amap_search_fluttify_example/widgets/scrollable_text.widget.dart';
 import 'package:decorated_flutter/decorated_flutter.dart';
 import 'package:flutter/material.dart';
-
+import 'package:amap_search_fluttify_example/widgets/dimens.dart';
 class GetPoiScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -40,8 +42,8 @@ class KeywordPoiScreen extends StatefulWidget {
 }
 
 class _KeywordPoiScreenState extends State<KeywordPoiScreen> {
-  final _keywordController = TextEditingController(text: '肯德基');
-  final _cityController = TextEditingController(text: '杭州');
+  final _keywordController = TextEditingController(text: '深业下城');
+  final _cityController = TextEditingController(text: '深圳');
   int _page = 1;
 
   List<String> _poiTitleList = [];
@@ -52,7 +54,7 @@ class _KeywordPoiScreenState extends State<KeywordPoiScreen> {
       resizeToAvoidBottomInset: false,
       appBar: AppBar(title: Text('关键字检索POI')),
       body: DecoratedColumn(
-        padding: EdgeInsets.all(kSpaceBig),
+        padding: EdgeInsets.all(kSpaceLarge),
         children: <Widget>[
           TextFormField(
             controller: _keywordController,
@@ -89,7 +91,14 @@ class _KeywordPoiScreenState extends State<KeywordPoiScreen> {
             },
             child: Text('下一页'),
           ),
-          Expanded(child: ScrollableText(_poiTitleList.join("\n"))),
+          Expanded(child: ScrollableText(()sync*{
+            if(_poiTitleList.isEmpty){
+              yield "";
+            }else{
+              final str=_poiTitleList.join("\n\n\n");
+              yield str;
+            }
+          }().last)),
         ],
       ),
     );
@@ -117,7 +126,7 @@ class _AroundPoiScreenState extends State<AroundPoiScreen> {
       resizeToAvoidBottomInset: false,
       appBar: AppBar(title: Text('周边检索POI')),
       body: DecoratedColumn(
-        padding: EdgeInsets.all(kSpaceBig),
+        padding: EdgeInsets.all(kSpaceLarge),
         children: <Widget>[
           TextFormField(
             controller: _keywordController,
@@ -193,8 +202,8 @@ class InputTipScreen extends StatefulWidget {
 }
 
 class _InputTipScreenState extends State<InputTipScreen> {
-  final _keywordController = TextEditingController(text: '肯德基');
-  final _cityController = TextEditingController(text: '杭州');
+  final _keywordController = TextEditingController(text: '深业下城');
+  final _cityController = TextEditingController(text: '深圳');
 
   List<InputTip> _inputTipList = [];
 
@@ -204,7 +213,7 @@ class _InputTipScreenState extends State<InputTipScreen> {
       resizeToAvoidBottomInset: false,
       appBar: AppBar(title: Text('输入内容自动提示')),
       body: DecoratedColumn(
-        padding: EdgeInsets.all(kSpaceBig),
+        padding: EdgeInsets.all(kSpaceLarge),
         children: <Widget>[
           TextFormField(
             controller: _keywordController,
@@ -225,7 +234,14 @@ class _InputTipScreenState extends State<InputTipScreen> {
             },
             child: Text('搜索'),
           ),
-          Expanded(child: ScrollableText(_inputTipList.join("\n"))),
+          Expanded(child: ScrollableText(()sync*{
+            if(_inputTipList.isEmpty){
+              yield "";
+            }else{
+              final str=_inputTipList.join("\n\n\n");
+              yield str;
+            }
+          }().last)),
         ],
       ),
     );

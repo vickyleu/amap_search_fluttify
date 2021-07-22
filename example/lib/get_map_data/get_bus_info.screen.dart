@@ -1,4 +1,5 @@
 import 'package:amap_search_fluttify/amap_search_fluttify.dart';
+import 'package:amap_search_fluttify_example/widgets/dimens.dart';
 import 'package:amap_search_fluttify_example/widgets/scrollable_text.widget.dart';
 import 'package:decorated_flutter/decorated_flutter.dart';
 import 'package:flutter/material.dart';
@@ -10,8 +11,8 @@ class GetBusInfoScreen extends StatefulWidget {
 }
 
 class _GetBusInfoScreenState extends State<GetBusInfoScreen> {
-  final _keywordController = TextEditingController(text: '武林广场');
-  final _cityController = TextEditingController(text: '杭州');
+  final _keywordController = TextEditingController(text: '市二');
+  final _cityController = TextEditingController(text: '深圳');
 
   String _busStation = '';
 
@@ -21,7 +22,7 @@ class _GetBusInfoScreenState extends State<GetBusInfoScreen> {
       resizeToAvoidBottomInset: false,
       appBar: AppBar(title: Text('获取公交数据')),
       body: DecoratedColumn(
-        padding: EdgeInsets.all(kSpaceBig),
+        padding: EdgeInsets.all(kSpaceLarge),
         children: <Widget>[
           TextFormField(
             controller: _keywordController,

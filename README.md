@@ -85,7 +85,7 @@ final routeResult = await AmapSearch.instance.searchBusRoute(
                   double.parse(_toLatController.text),
                   double.parse(_toLngController.text),
                 ),
-                city: '杭州',
+                city: '深圳',
               );
 
 /// 驾车路径规划

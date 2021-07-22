@@ -17,8 +17,9 @@ import 'widgets/todo.screen.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  await AmapCore.init('f583e0d5b70400167993615c3adc3ced');
-
+  await AmapCore.init('5f82fbf5c9ab57b39593ffe96bcb9cbb');
+// 22.557091  114.070306
+  //22.557275  114.08574
   runApp(MyApp());
 }
 
@@ -30,7 +31,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return ScopedReleasePool(child: MaterialApp(home: Home()));
+    return ScopedReleasePool(child: MaterialApp(home: Home()),tag: "app",);
   }
 }
 

@@ -1,4 +1,5 @@
 import 'package:amap_search_fluttify/amap_search_fluttify.dart';
+import 'package:amap_search_fluttify_example/widgets/dimens.dart';
 import 'package:amap_search_fluttify_example/widgets/function_item.widget.dart';
 import 'package:decorated_flutter/decorated_flutter.dart';
 import 'package:flutter/material.dart';
@@ -35,7 +36,7 @@ class AddressEncodeScreen extends StatefulWidget {
 
 class _AddressEncodeScreenState extends State<AddressEncodeScreen> {
   final _keywordController = TextEditingController(text: '阿里巴巴');
-  final _cityController = TextEditingController(text: '杭州');
+  final _cityController = TextEditingController(text: '深圳');
 
   List<Geocode> _geocodeList = [];
 
@@ -45,7 +46,7 @@ class _AddressEncodeScreenState extends State<AddressEncodeScreen> {
       resizeToAvoidBottomInset: false,
       appBar: AppBar(title: Text('地理编码（地址转坐标）')),
       body: DecoratedColumn(
-        padding: EdgeInsets.all(kSpaceBig),
+        padding: EdgeInsets.all(kSpaceLarge),
         children: <Widget>[
           TextFormField(
             controller: _keywordController,
@@ -93,7 +94,7 @@ class _AddressDecodeScreenState extends State<AddressDecodeScreen> {
       resizeToAvoidBottomInset: false,
       appBar: AppBar(title: Text('逆地理编码（坐标转地址）')),
       body: DecoratedColumn(
-        padding: EdgeInsets.all(kSpaceBig),
+        padding: EdgeInsets.all(kSpaceLarge),
         children: <Widget>[
           DecoratedRow(
             children: <Widget>[

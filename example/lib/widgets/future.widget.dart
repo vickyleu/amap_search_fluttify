@@ -8,10 +8,12 @@ class FutureText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PreferredFutureBuilder<String>(
-      future: data,
-      showLoading: false,
-      builder: (data) => Text(data),
-    );
+    // PreferredNestedScrollView(headers: headers, body: body)
+    return FutureBuilder<String>(builder: (context,data) => Text(data?.data??""),future: data,);
+    // return PreferredFutureBuilder<String>(
+    //   future: data,
+    //   showLoading: false,
+    //   builder: (data) => Text(data),
+    // );
   }
 }

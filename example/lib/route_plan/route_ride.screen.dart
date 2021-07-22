@@ -1,7 +1,7 @@
 import 'package:amap_search_fluttify/amap_search_fluttify.dart';
 import 'package:decorated_flutter/decorated_flutter.dart';
 import 'package:flutter/material.dart';
-
+import 'package:amap_search_fluttify_example/widgets/dimens.dart';
 /// 骑行路线规划
 class RouteRideScreen extends StatefulWidget {
   @override
@@ -9,11 +9,11 @@ class RouteRideScreen extends StatefulWidget {
 }
 
 class _RouteRideScreenState extends State<RouteRideScreen> {
-  final _fromLatController = TextEditingController(text: '30.219933');
-  final _fromLngController = TextEditingController(text: '120.023728');
+  final _fromLatController = TextEditingController(text: '22.557091');
+  final _fromLngController = TextEditingController(text: '114.070306');
 
-  final _toLatController = TextEditingController(text: '30.27065');
-  final _toLngController = TextEditingController(text: '120.163117');
+  final _toLatController = TextEditingController(text: '22.557275');
+  final _toLngController = TextEditingController(text: '114.08574');
 
   String _routeResult = '';
 
@@ -23,7 +23,7 @@ class _RouteRideScreenState extends State<RouteRideScreen> {
       resizeToAvoidBottomInset: false,
       appBar: AppBar(title: Text('骑行路线规划')),
       body: DecoratedColumn(
-        padding: EdgeInsets.all(kSpaceBig),
+        padding: EdgeInsets.all(kSpaceLarge),
         children: <Widget>[
           DecoratedRow(
             itemSpacing: kSpaceNormal,
